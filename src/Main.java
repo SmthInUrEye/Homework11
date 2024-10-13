@@ -1,21 +1,14 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-
-import java.time.LocalDate;
-
 public class Main {
-
     //Метод проверки високосного года
     public static void isLeapYear(int year) {
-        if ( ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) && (year > 1584) )
+        if ( ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) && (year > 1584) ) {
             System.out.println ( year + " - високосный год" );
-        else System.out.println ( year + " - невисокоссный год" );
+        } else System.out.println ( year + " - невисокоссный год" );
     }
 
     //Метод проверки устройства пользователя
     public static void checkUserDevice(int OS, int yearOfProduction) {
-        int currentYear = LocalDate.now ().getYear ();
-        if ( yearOfProduction == currentYear ) {
+        if ( yearOfProduction >= 2015 ) {
             if ( OS == 0 ) {
                 System.out.println ( "Установите версию приложения для iOS по ссылке" );
             } else {
@@ -49,8 +42,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        isLeapYear ( 2021 );
-        checkUserDevice ( 1, 2015 );
+        isLeapYear ( 2024 );
+        checkUserDevice ( 1, 2013 );
         int deliveryDistance = 95;
         if ( calculateDeliveryDays ( deliveryDistance ) == 0 ) {
             System.out.println ( "Доставки нет" );
