@@ -3,7 +3,9 @@ public class Main {
     public static void isLeapYear(int year) {
         if ( ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) && (year > 1584) ) {
             System.out.println ( year + " - високосный год" );
-        } else System.out.println ( year + " - невисокоссный год" );
+        } else {
+            System.out.println ( year + " - невисокоссный год" );
+        }
     }
 
     //Метод проверки устройства пользователя
@@ -43,7 +45,7 @@ public class Main {
 
     public static void main(String[] args) {
         isLeapYear ( 2024 );
-        checkUserDevice ( 1, 2013 );
+        checkUserDevice ( 1, 2015 );
         int deliveryDistance = 95;
         if ( calculateDeliveryDays ( deliveryDistance ) == 0 ) {
             System.out.println ( "Доставки нет" );
